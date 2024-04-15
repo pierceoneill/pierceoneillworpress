@@ -1,0 +1,58 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.18 Product Quantity CSS
+/*----------------------------------------*/
+
+.nl-product-quantity{
+	width: 100px;
+	position: relative;
+    border-radius: 20px;
+}
+
+.nl-cart-plus,
+.nl-cart-minus{
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+	color: var(--nl-common-black);
+	@extend %nl-transition;
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	@include transform(translateY(-50%));
+
+	& svg{
+		@include transform(translateY(-2px));
+	}
+    &:hover{
+        cursor: pointer;
+        color: var(--nl-theme-1);
+    }
+
+	&.nl-cart-plus{
+		left: auto;
+		right: 16px;
+
+		&::after{
+			left: 0;
+			right: auto;
+		}
+	}
+}
+
+.nl-cart-input[type="text"]{
+    height:34px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #DADCE0;
+	background-color: var(--nl-common-white);
+	padding: 0 30px;
+    border-radius: 20px;
+	@include rtl{
+		text-align: center;
+	}
+    &:focus{
+        outline: none;
+    }
+} 

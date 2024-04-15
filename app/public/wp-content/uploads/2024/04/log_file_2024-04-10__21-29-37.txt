@@ -1,0 +1,47 @@
+
+---Downloaded files---
+The import files for: Home Portfolio were successfully downloaded!
+Initial max execution time = 3600
+Files info:
+Site URL = https://pierceoneillpr.wpenginepowered.com
+Data file = /nas/content/live/pierceoneillpr/wp-content/themes/nilos/sample-data/contents-demo.xml
+Widget file = /nas/content/live/pierceoneillpr/wp-content/themes/nilos/sample-data/widget-settings.json
+Customizer file = /nas/content/live/pierceoneillpr/wp-content/themes/nilos/sample-data/customizer-data.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Blog Sidebar : 
+
+Search - Search Here - Imported
+Nilos Sidebar Posts Image - Recent Posts - Imported
+Categories - Popular Keywords - Imported
+Image - Adds Banner - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

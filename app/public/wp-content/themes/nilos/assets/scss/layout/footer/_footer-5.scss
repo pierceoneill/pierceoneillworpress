@@ -1,0 +1,68 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.5 Footer Style 5
+/*----------------------------------------*/
+
+.#{$theme-prifix}-footer{
+    $self : &;
+    &-style-5{
+        #{$self}{
+            &-social{
+                & a{
+                    border-radius: 50%;
+                    color: #010F1C;
+                    &:hover{
+                        background-color: var(--nl-theme-green);
+                        border-color: var(--nl-theme-green);
+                        color: var(--nl-common-white);
+                    }
+                }
+            }
+            &-widget{
+                & ul{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: var(--nl-theme-green);
+                                &::after{
+                                    background-color: var(--nl-theme-green);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-talk{
+                & h4{
+        
+                    & a{
+                        &:hover{
+                            color: var(--nl-theme-green);
+                        }
+                    }
+        
+                }
+            }
+            &-contact{
+                &-content{
+                    & p{
+                        & a{
+                            &:hover{
+                                color: var(--nl-theme-green);
+                            }
+                        }
+                    }
+                }
+            }
+            &-copyright{
+                & p{
+                    
+                    & a{
+                        color: var(--nl-theme-green);
+                    }
+                }
+            }
+        }
+    }
+}

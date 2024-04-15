@@ -1,0 +1,66 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.12 Profile CSS
+/*----------------------------------------*/
+
+.profile{
+
+    &__address{
+        &-header{
+            margin-bottom: 20px;
+        }
+        &-item{
+            @media #{$sm, $xs}{
+                margin-bottom: 40px;
+            }
+        }
+        &-title{
+            font-size: 22px;
+            margin-bottom: 6px;
+            margin-right: 22px;
+        }
+        &-icon{
+            & span{
+                display: inline-block;
+                min-width: 45px;
+                margin-right: 20px;
+
+                @include rtl{
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+
+                @media #{$xs}{
+                    margin-bottom: 20px;
+                }
+                & svg{
+                    width: 45px;
+
+                    & path{
+                        fill: var(--nl-theme-primary);
+                    }
+                }
+            }
+        }
+        &-content{
+            & p{
+                font-size: 14px;
+                margin-bottom: 0;
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                & span{
+                    color: var(--nl-common-black);
+                    font-weight: 500;
+                    margin-right: 7px;
+
+                    @include rtl{
+                        margin-right: 0;
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+    }
+}

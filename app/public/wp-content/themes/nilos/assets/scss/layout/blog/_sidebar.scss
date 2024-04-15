@@ -1,0 +1,192 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.3 Sidebar css
+/*----------------------------------------*/
+
+.#{$theme-prifix}-sidebar{
+    $self : &;
+
+    &-wrapper{
+        position: sticky;
+        top: 120px;
+        @media #{$md, $sm, $xs}{
+            margin-top: 60px;
+        }
+
+        & .tagcloud{
+            padding-top: 24px;
+            border-top: 1px solid #E0E2E3;
+        }
+    }
+
+    &-ml--24{
+        margin-left: -24px;
+
+        @media #{$lg, $md, $sm, $xs}{
+            margin-left: 0;
+        }
+    }
+    &-widget{
+        &-title{
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #E0E2E3;
+        }
+
+        & ul{
+            & li{
+                list-style: none;
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                & a{
+                    position: relative;
+                    padding-left: 16px;
+                    font-size: 16px;
+                    color: #55585B;
+                    display: block;
+
+                    & span{
+                        float: right;
+                    }
+
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        background-color: #CED2D6;
+                        border-radius: 50%;
+                        left: 0;
+                        top: 12px;
+                    }
+
+                    &:hover{
+                        color: var(--nl-theme-primary);
+                    }
+                }
+
+                & ul{
+                    padding-left: 15px;
+                    padding-top: 6px;
+
+                }
+            }
+        }
+
+        & .nice-select{
+            height: 50px;
+            line-height: 50px;
+            border-radius: 0;
+            border: 1px solid #E0E2E3;
+            font-size: 16px;
+            
+            & .list{
+                margin-top: 0;
+                border-radius: 0;
+                padding: 15px 0;
+                & .option{
+                    line-height: 26px;
+                    min-height: 30px;
+
+                    &:hover{
+                        color: var(--nl-theme-primary);
+                    }
+                }
+            }
+        }
+    }
+    &-search{
+        &-input{
+            position: relative;
+            & input{
+                border: 1px solid #E0E2E3;
+                height: 50px;
+                padding-right: 50px;
+                font-size: 16px;
+
+                @include nl-placeholder{
+                    color: #95999D;
+                }
+            }
+
+            & button{
+                position: absolute;
+                top: 50%;
+                right: 25px;
+                color: var(--nl-common-black);
+                font-size: 16px;
+                @extend %translateY1_2;
+                & svg{
+                    @extend %nl-svg-y-2;
+                }
+
+                &:hover{
+                    color: var(--nl-theme-primary);
+                }
+            }
+        }
+    }
+    &-about{
+        padding: 40px 40px 35px;
+        text-align: center;
+        border: 1px solid #E0E2E3;
+        &-thumb{
+            & img{
+                width: 160px;
+                height: 160px !important;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &-title{
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 0;
+
+            & a{
+                &:hover{
+                    color: var(--nl-theme-primary);
+                }
+            }
+        }
+        &-designation{
+            color: #A0A2A4;
+            font-size: 15px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        &-content{
+            & p{
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+// tagcloud
+
+.tagcloud{
+    
+    & a{
+        font-size: 15px !important;
+        color: var(--nl-text-body);
+        padding: 5px 13px;
+        line-height: 1;
+        display: inline-block;
+        border: 1px solid #E6E7E8;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+        &:hover{
+            background-color: var(--nl-theme-primary);
+            border-color: var(--nl-theme-primary);
+            color: var(--nl-common-white);
+        }
+    }
+}

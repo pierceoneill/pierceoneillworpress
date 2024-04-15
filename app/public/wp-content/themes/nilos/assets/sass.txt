@@ -1,0 +1,5 @@
+sass --watch C:\laragon\www\nilos\wp-content\themes\nilos\assets\scss\main.scss:C:\laragon\www\nilos\wp-content\themes\nilos\assets\css\nilos-core.css
+
+sass --watch D:\xampp\htdocs\wp\nilos\wp-content\themes\nilos\assets\scss\main.scss:D:\xampp\htdocs\wp\nilos\wp-content\themes\nilos\assets\css\nilos-core.css
+
+sass --watch /Users/shahnewaz/wp/nilos/wp-content/themes/nilos/assets/scss/main.scss:/Users/shahnewaz/wp/nilos/wp-content/themes/nilos/assets/css/nilos-core.css

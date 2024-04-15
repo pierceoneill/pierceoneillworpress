@@ -1,0 +1,255 @@
+@use '../../utils' as *;
+@use './wooExtends' as *;
+
+// lost password
+.woocommerce-ResetPassword.lost_reset_password.nl-woo-input-field{
+    & > p{
+        font-size: 15px;
+    }
+}
+
+.nl-woo-myaccount{
+    &-login{
+        &-title{
+            font-weight: 500;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+    }
+    &-register{
+        @media #{$md, $sm, $xs}{
+            margin-top: 50px;
+        }
+    }
+    &-navigation{
+        & ul{
+            padding: 0 !important;
+            margin: 0 0 25px !important;
+            @include flexbox();
+            & li{
+                list-style: none;
+                &:last-child{
+                    & a{
+                        border-right: 1px solid #E0E2E3;
+                    }
+                }
+                & a{
+                    display: inline-block;
+                    border: 1px solid #E0E2E3;
+                    border-right: 0;
+                    padding: 5px 20px;
+                }
+
+                &.is-active{
+                    & a,
+                    & a:hover{
+                        background-color: var(--nl-theme-primary);
+                        border-color: var(--nl-theme-primary) !important;
+                        color: var(--nl-common-white);
+                    }
+                }
+            }
+        }
+    }
+    &-content{
+        & a{
+            color: var(--nl-theme-primary);
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    &-order{
+        &-table{
+            & table.shop_table.shop_table_responsive{
+                & thead{
+                    & tr{
+                        & th{
+                            padding-left: 1.5rem ;
+    
+                            &.woocommerce-orders-table__header.woocommerce-orders-table__header-order-actions{
+                                width: 25%;
+                            }
+                        }
+                    }
+                }
+                & tbody{
+                    & tr{
+                        & td{
+                            font-size: 15px;
+                            text-align: left;
+                            padding: 1rem 1.5rem;
+                            &.woocommerce-orders-table__cell-order-number{
+                                & a{
+                                    color: var(--nl-theme-primary);
+                                    text-decoration: none;
+                                    font-weight: 500;
+                                }
+                            }
+                            &.woocommerce-orders-table__cell-order-actions,
+                            &.download-file{
+                                & a{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    color: var(--nl-common-black);
+                                    padding: 6px 18px;
+                                    border: 1px solid rgba(1, 15, 28, 0.12);
+                                    text-align: center;
+                                    text-decoration: none;
+                                    @extend %nl-transition;
+                                    margin-top: 5px;
+                                    margin-bottom: 5px;
+                                    &:not(:last-child){
+                                        margin-right: 10px;
+                                    }
+                                    &:hover{
+                                        background-color: var(--nl-theme-primary);
+                                        border-color: var(--nl-theme-primary);
+                                        color: var(--nl-common-white);
+                                    }
+    
+                                    &.cancel{
+                                        &:hover{
+                                            background-color: #F1416C;
+                                            border-color: #F1416C;
+                                            color: var(--nl-common-white);
+                                        }
+                                    }
+                                }
+                            }
+                            &.woocommerce-orders-table__cell-order-total{
+                                & span{
+                                    color: var(--nl-theme-primary);
+                                }
+                                & del{
+                                    font-weight: 400;
+                                    font-size: 13px;
+                                    color: var(--nl-text-1);
+                                }
+                                & ins{
+                                    text-decoration: none;
+                                }
+                            }
+    
+                            &.download-product{
+                                & a{
+                                    color: var(--nl-common-black);
+                                    font-weight: 500;
+                                    text-decoration: none !important;
+                                    @extend %nl-transition;
+                                    &:hover{
+                                        color: var(--nl-theme-primary);
+                                    }
+                                }
+                            }
+                        }
+                        &.woocommerce-orders-table__row--status{
+                            &-on-hold,
+                            &-refunded{
+                                & .woocommerce-orders-table__cell-order-status{
+                                    & span{
+                                        color: #ff9800;
+                                        background-color: rgba($color: #ff9800, $alpha: .1);
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        padding: 5px 16px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                            &-pending{
+                                & .woocommerce-orders-table__cell-order-status{
+                                    & span{
+                                        color: #7239ea;
+                                        background-color: rgba($color: #7239ea, $alpha: .1);
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        padding: 5px 16px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                            &-processing{
+                                & .woocommerce-orders-table__cell-order-status{
+                                    & span{
+                                        color: #3E97FF;
+                                        background-color: rgba($color: #3E97FF, $alpha: .1);
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        padding: 5px 16px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                            &-completed{
+                                & .woocommerce-orders-table__cell-order-status{
+                                    & span{
+                                        color: #50CD89;
+                                        background-color: rgba($color: #50CD89, $alpha: .1);
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        padding: 5px 16px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                            &-cancelled,
+                            &-failed {
+                                & .woocommerce-orders-table__cell-order-status{
+                                    & span{
+                                        color: #F1416C;
+                                        background-color: rgba($color: #F1416C, $alpha: .1);
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        padding: 5px 16px;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }                        
+                        }
+                    }
+                }
+            }
+            &.is-download-table{
+                margin-bottom: 70px;
+                & table{
+                    width: 100%;
+                }
+            }
+        }
+        &-view-title{
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        &-status{
+            border-top: 4px solid #FFB342;
+            background-color: rgba($color: #FFB342, $alpha: .1);
+            padding: 14px 26px;
+            margin: 0;
+            margin-bottom: 35px;
+            & p{
+                margin-bottom: 0;
+                color: var(--nl-common-black);
+                & span{
+                    color: var(--nl-theme-primary);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &-address{
+        &-title{
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        &-msg{
+            margin-bottom: 40px;
+        }
+    }
+}

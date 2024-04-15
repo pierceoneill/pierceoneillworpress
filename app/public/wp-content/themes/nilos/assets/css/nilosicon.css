@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "nilosicon";
+    src: url("../fonts/nilosicon_nilos.ttf?3837dea8ee286554e3fb28a0d0007b07") format("truetype"),
+url("../fonts/nilosicon_nilos.woff?3837dea8ee286554e3fb28a0d0007b07") format("woff"),
+url("../fonts/nilosicon_nilos.woff2?3837dea8ee286554e3fb28a0d0007b07") format("woff2"),
+url("../fonts/nilosicon_nilos.eot?3837dea8ee286554e3fb28a0d0007b07#iefix") format("embedded-opentype");
+}
+
+i[class^="nilosicon-"]:before, i[class*=" nilosicon-"]:before {
+    font-family: nilosicon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nilosicon-store:before {
+    content: "\f101";
+}
+.nilosicon-magnifying-glass:before {
+    content: "\f102";
+}
+.nilosicon-search:before {
+    content: "\f103";
+}
+.nilosicon-heart:before {
+    content: "\f104";
+}
+.nilosicon-user:before {
+    content: "\f105";
+}
+.nilosicon-menu:before {
+    content: "\f106";
+}
+.nilosicon-menu-1:before {
+    content: "\f107";
+}
+.nilosicon-watermelon:before {
+    content: "\f108";
+}
+.nilosicon-broccoli:before {
+    content: "\f109";
+}
+.nilosicon-cupcake:before {
+    content: "\f10a";
+}
+.nilosicon-bread:before {
+    content: "\f10b";
+}
+.nilosicon-apple:before {
+    content: "\f10c";
+}
+.nilosicon-fish:before {
+    content: "\f10d";
+}
+.nilosicon-snack:before {
+    content: "\f10e";
+}
+.nilosicon-eggs:before {
+    content: "\f10f";
+}
+.nilosicon-coffee:before {
+    content: "\f110";
+}
+.nilosicon-pet:before {
+    content: "\f111";
+}
+.nilosicon-basketball-match:before {
+    content: "\f112";
+}
+.nilosicon-milk:before {
+    content: "\f113";
+}
+.nilosicon-vegan:before {
+    content: "\f114";
+}
+.nilosicon-smartphone:before {
+    content: "\f115";
+}
+.nilosicon-camera:before {
+    content: "\f116";
+}
+.nilosicon-monitor:before {
+    content: "\f117";
+}
+.nilosicon-home:before {
+    content: "\f118";
+}
+.nilosicon-store-1:before {
+    content: "\f119";
+}
+.nilosicon-gift:before {
+    content: "\f11a";
+}
+.nilosicon-discount:before {
+    content: "\f11b";
+}
+.nilosicon-voucher:before {
+    content: "\f11c";
+}
+.nilosicon-price-tag:before {
+    content: "\f11d";
+}
+.nilosicon-football:before {
+    content: "\f11e";
+}
+.nilosicon-running:before {
+    content: "\f11f";
+}
+.nilosicon-play-button:before {
+    content: "\f120";
+}

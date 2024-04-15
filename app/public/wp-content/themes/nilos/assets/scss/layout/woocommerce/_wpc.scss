@@ -1,0 +1,201 @@
+@use '../../utils' as *;
+@use './wooExtends' as *;
+
+// global css here
+#woosc-area{
+    background: none !important;
+
+    & .woosc-inner{
+        & .woosc-table{
+            &.open_woosc_table{
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+        }
+    }
+    
+}
+
+.nl-header-woosc-btn-wrapper{
+    position: relative;
+    & .woosc-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        font-size: 0 !important;
+    }
+}
+
+.woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot{
+    color: var(--nl-common-black);
+}
+
+.woosw-item--price{
+    @include flexbox();
+    flex-direction: row-reverse;
+    justify-content: start;
+
+    & span{
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--nl-common-black);
+    }
+    & del,
+    & ins{
+        text-decoration: none;
+    }
+
+    & del{
+        margin-left: 3px;
+        & span{
+            font-weight: 400;
+            font-size: 14px;
+            text-decoration-line: line-through;
+            color: var(--nl-text-1);
+        }
+    }
+    & ins{
+        & span{
+            color: var(--nl-common-black);
+        }
+    }
+}
+
+.woosw-popup .woosw-items .woosw-item .woosw-item-inner{
+    flex-wrap: wrap;
+}
+
+.woosw-popup .woosw-items .woosw-item .woosw-item-inner > div:last-child{
+    margin-top: 20px;
+}
+
+.woosw-popup .woosw-items .woosw-item .woosw-item--add p, .woosw-popup .woosw-items .woosw-item .woosw-item--add .add_to_cart_inline{
+    height: 43px;
+    display: block;
+}
+
+#woosq-popup{
+
+    table.variations{
+        margin-bottom: 15px;
+        & label{
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 4px;
+            color: var(--nl-common-black);
+        }
+
+        & tbody{
+            & tr{
+                flex-direction: column;
+            }
+        }
+        & .tpwvs-attr-button{
+            line-height: 1;
+        }
+        & .tpwvs-swatches.tpwvs-attr-color.rounded{
+            border-radius: 50% !important;
+        }
+        & div.tpwvs-attr-color{
+            margin-bottom: -1px;
+        }
+
+    }  
+    
+    @extend %grouped_form;
+
+    @extend %woo_linked_product_btn;
+    
+}
+
+
+div.woosw-list{
+    $item : '.woosw-item';
+    & table.woosw-items{
+        width: 100%;
+        border: 0;
+        & #{$item}{
+            border: 1px solid #E0E2E3;
+
+            &:nth-child(2n) td{
+                background-color: transparent;
+            }
+            & td{
+                text-align: left;
+                border: 0;
+            }
+            &:hover{
+                & td{
+                    background-color: transparent;
+                }
+            }
+
+            & #{$item}{
+                &--remove{
+                    & span{
+                        &:hover{
+                            &::before{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+                &--image{
+                    width: 111px;
+                    & img{
+                        width: 90px;
+                        height: auto;
+                        border-radius: 0;
+                    }
+                }
+                &--info{
+                    #{$item}{
+                        &--name{
+                            & a{
+                                font-weight: 400;
+                                font-size: 16px;
+                                color: var(--nl-common-black);
+        
+                                &:hover{
+                                    color: var(--nl-theme-primary);
+                                }
+                            }
+                        }
+                        &--price{
+                            @extend %woo_price;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .woosw-copy,
+    & .woosw-share{
+        & .woosw-copy-label,
+        & .woosw-share-label{
+            font-weight: 500;
+            color: var(--nl-common-black)
+        }
+    }
+
+    & .woosw-share{
+        & a{
+            &:hover{
+                color: var(--nl-theme-primary)
+            }
+        }
+    }
+
+
+
+    #woosw_copy_btn{
+        @extend .nl-btn;
+        padding: 14px 26px;
+        margin-left: 10px;
+    }
+}

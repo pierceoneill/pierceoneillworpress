@@ -1,0 +1,253 @@
+@use '../utils' as *;
+/*---------------------------------
+    1.2 Common Classes
+---------------------------------*/
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.z-index-1{
+	z-index: 1;
+}
+
+.z-index-11{
+	z-index: 11;
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+
+.include-bg{
+	@include background();
+}
+
+
+// demo for method
+.demo{
+	@include nl-transition(color, .3s, linear);	
+
+	@include nl-transition-mul((color .3s linear, transform .2s ease));	
+
+	@include rtl{
+		margin-left: 0;
+		margin-right: 15px;
+	}
+	@include nl-root('div'){
+		img{
+			margin-left: 10px;
+		}
+	}
+	@include dark{
+		color: yellow;
+	}
+}
+
+
+/*----------------------------------------
+    Body Overlay 
+-----------------------------------------*/
+
+.body-overlay{
+    background-color: var(--nl-common-black);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include nl-transition();
+
+	&:hover{
+		cursor: url('../img/icon/cross-out.png'), pointer;
+	}
+}
+
+.body-overlay.opened{
+	opacity: .7;
+    visibility: visible;
+}
+
+
+
+/* dropcap */
+.#{$theme-prifix}-dropcap{
+	&::first-letter{
+		font-size: 90px;
+		font-weight: 500;
+		float: left;
+		text-align: center;
+		color: var(--nl-common-black);
+		margin-right: 5px;
+		line-height: inherit;
+		text-transform: capitalize;
+	}
+}
+
+// for svg
+// on hover stroke animation
+// not checked
+.class{
+	stroke-dasharray: 189px, 191px;
+	stroke-dashoffset: 0px;
+}
+
+
+.#{$theme-prifix}-all-font-roboto{
+	& *:not(i){
+		@extend %nl-ff-roboto;
+	}
+}
+/* gutter for x axis */
+.nl-gx-20{
+	--bs-gutter-x: 20px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 20px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 20px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 15px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 10px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+/* gutter for x axis */
+.nl-gx-30{
+	--bs-gutter-x: 30px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 15px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 10px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+/* gutter for x axis */
+.nl-gx-40{
+	--bs-gutter-x: 40px;
+
+	@media #{$lg}{
+		--bs-gutter-x: 40px;
+	}
+
+	@media #{$md}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$sm}{
+		--bs-gutter-x: 30px;
+	}
+
+	@media #{$xs}{
+		--bs-gutter-x: 15px;
+	}
+
+	& [class*="col-"]{
+		padding-right: calc(var(--bs-gutter-x) * .5);
+		padding-left: calc(var(--bs-gutter-x) * .5);
+		margin-top: var(--bs-gutter-y);
+	}
+}
+
+.admin-bar{
+    & .nl-header-transparent,
+	& .nl-header-sticky.header-sticky,
+	& .header-sticky-2,
+	& .cartmini__area,
+	& .offcanvas__full,
+	& .nl-search-area{
+        margin-top: 32px;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+
+	.admin-bar{
+		.nl-search-area,
+		.nl-header-transparent,
+		.cartmini__area{
+			margin-top: 46px;
+		}
+		.offcanvas__area,
+		.nl-header-sticky.header-sticky,
+		.header-sticky-2{
+			margin-top:0;
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+  .admin-bar{
+		.nl-search-area,
+		.nl-header-transparent,
+		.cartmini__area{
+			margin-top: 46px;
+		}
+		.offcanvas__area,
+		.nl-header-sticky.header-sticky,
+		.header-sticky-2 {
+			margin-top:0;
+		}
+	}
+}
+

@@ -1,0 +1,91 @@
+@use './mixins' as *;
+
+%include-bg{
+	@include background();
+}
+
+%nl-transition{
+	@include nl-transition();
+}
+
+%nl-transition-common{
+	@include nl-transition();
+}
+
+%nl-transition-color{
+	@include nl-transition(color);
+}
+
+%nl-transition-transform{
+	@include nl-transition(transform);
+}
+
+%nl-transition-border-color{
+	@include nl-transition(border-color);
+}
+
+%nl-transition-bg-color{
+	@include nl-transition(backgroud-color);
+}
+
+%nl-transition-fz{
+	@include nl-transition(font-size);
+}
+
+
+// svg
+
+%nl-svg-y-1{
+	@include transform(translateY(-1px));
+}
+
+%nl-svg-y-2{
+	@include transform(translateY(-2px));
+}
+
+%nl-svg-y-3{
+	@include transform(translateY(-3px));
+}
+
+%nl-svg-y-4{
+	@include transform(translateY(-4px));
+}
+
+
+// font
+
+%nl-ff-roboto{
+	font-family: var(--nl-ff-roboto);
+}
+
+%nl-ff-jost{
+	font-family: var(--nl-ff-jost);
+}
+
+%nl-ff-fontawesome{
+	font-family: var(--nl-ff-fontawesome);
+}
+
+
+/* transform */
+%translateY1_2{
+	@include transform(translateY(-50%));
+}
+%translateX1_2{
+	@include transform(translateX(-50%));
+}
+%translate1_2{
+	@include transform(translate(-50%, -50%));
+}
+
+
+// bg thumbnails
+
+%bg-thumb{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
